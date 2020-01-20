@@ -1,0 +1,165 @@
+:root{
+    --section-text-bk: #323A45;
+    --card-teal: #00695c;
+    --card-blue: #1565c0;
+    --card-purple: #4527a0;
+    --card-red: #c62828;
+}
+
+section{
+    padding: 50px;
+}
+
+.no-transparent{
+    height: 60px;
+    background-color: #fff !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(245, 206, 206);
+    padding: 180px 16px 100px;
+}
+
+.hero-content{
+    text-align: center;
+}
+
+.hero-content > .lead{
+    padding: 0 100px;
+    margin: 40px 0 0;
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    transition: 0.7s;
+}
+
+.card-teal:hover{
+    background-color: var(--card-teal);
+}
+.card-blue:hover{
+    background-color: var(--card-blue);
+}
+.card-purple:hover{
+    background-color: var(--card-purple);
+}
+.card-red:hover{
+    background-color: var(--card-red);
+}
+.card:hover .icon, .card:hover .card-title, .card:hover .card-body > i{
+    color: #fff;
+}
+
+.card:hover .card-body > i{
+    top: 80%;
+}
+
+.icon{
+    font-size: 5em;
+}
+
+.card-body > i{
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: top 0.5s;
+    font-size: 1.3em;
+    cursor: pointer;
+}
+
+/* SCROLL BAR */
+
+@keyframes ani-mouse {
+    0% {
+    opacity: 1;
+    top: 29%;
+    }
+    15% {
+    opacity: 1;
+    top: 50%;
+    }
+    50% {
+    opacity: 0;
+    top: 50%;
+    }
+    100% {
+    opacity: 0;
+    top: 29%;
+    }
+}
+
+.scroll-btn {
+    display: block;
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+/* .scroll-btn > * {
+    display: inline-block;
+    line-height: 18px;
+    font-size: 13px;
+    font-weight: normal;
+    color: #333333;
+    color: #242424;
+    font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: 2px;
+}
+
+.scroll-btn > *:hover,
+.scroll-btn > *:focus,
+.scroll-btn > *.active {
+    color: #333333;
+}
+
+.scroll-btn > *:hover,
+.scroll-btn > *:focus,
+.scroll-btn > *:active,
+.scroll-btn > *.active {
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+} */
+
+.scroll-btn .mouse {
+    position: relative;
+    display: block;
+    width: 35px;
+    height: 55px;
+    margin: 0 auto 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 3px solid#525252;
+    /* border: 3px solid #212529; */
+    border-radius: 23px;
+}
+
+.scroll-btn .mouse > * {
+    position: absolute;
+    display: block;
+    top: 29%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    margin: -4px 0 0 -4px;
+    background: #292a2b;
+    /* background: #212529; */
+    border-radius: 50%;
+    -webkit-animation: ani-mouse 2.5s linear infinite;
+    -moz-animation: ani-mouse 2.5s linear infinite;
+    animation: ani-mouse 2.5s linear infinite;
+}
+
+.section-title{
+    color: var(--section-text-bk);
+    margin: 0 0 30px;
+}
