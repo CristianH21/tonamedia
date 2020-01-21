@@ -11,6 +11,7 @@ body{
     height: 80px;
     background-color: transparent !important;
     transition: 0.5s;
+    z-index: 1;
 }
 
 .btn{
