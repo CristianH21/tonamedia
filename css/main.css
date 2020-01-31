@@ -10,6 +10,11 @@ section{
     padding: 50px;
 }
 
+.navbar-brand img{
+    width: 250px;
+    height: auto;
+}
+
 .no-transparent{
     height: 60px;
     background-color: #fff !important;
